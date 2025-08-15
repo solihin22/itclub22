@@ -1,43 +1,38 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Sederhana</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Navigasi -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#profile">Profile</a></li>
-    </ul>
-  </nav>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Halaman Home -->
-  <section id="home" class="page">
-    <h1>Selamat Datang di Website Saya</h1>
-    <p>Teknologi Informasi (TI), atau dalam bahasa Inggris dikenal dengan istilah Information technology (IT) adalah istilah umum untuk teknologi 
-      apa pun yang membantu manusia dalam membuat, mengubah, menyimpan, mengomunikasikan dan/atau menyebarkan informasi. TI menyatukan komputasi dan komunikasi 
-      berkecepatan tinggi untuk data, suara, dan video. Contoh dari Teknologi Informasi bukan hanya berupa komputer pribadi, tetapi juga telepon, TV, peralatan rumah tangga elektronik, 
-      dan perangkat genggam modern/gawai (misalnya ponsel)</p>
-    <img src="https://github.com/solihin22/itclub22/blob/main/Logo_ANRI_(2016).jpg?raw=true">
-    <p>Pada awal sejarah, manusia bertukar informasi melalui bahasa. Maka bahasa adalah teknologi, bahasa memungkinkan seseorang memahami informasi yang disampaikan oleh orang lain tetapi itu tidak bertahan secara lama karena Setelah ucapan itu selesai, maka informasi yang berada di tangan si penerima itu akan dilupakan dan tidak bisa disimpan lama. Selain itu, jangkauan suara juga terbatas. </p>
-    <p>Setelah itu teknologi penyampaian informasi berkembang melalui gambar. Dengan gambar jangkauan informasi bisa lebih jauh. Gambar ini bisa dibawa-bawa dan disampaikan kepada orang lain. Selain itu informasi yang ada akan bertahan lebih lama. Beberapa gambar peninggalan zaman purba masih ada sampai sekarang sehingga manusia sekarang dapat mencoba memahami informasi yang ingin disampaikan pembuatnya. </p>
-  </section>
+<!-- Navigasi -->
+<nav class="bg-gray-800 p-4">
+  <ul class="flex justify-center space-x-6">
+    <li><a href="#" onclick="showPage('home')" class="text-white hover:text-yellow-400">Home</a></li>
+    <li><a href="#" onclick="showPage('profile')" class="text-white hover:text-yellow-400">Profile</a></li>
+  </ul>
+</nav>
 
-  <!-- Halaman Profile -->
-  <section id="profile" class="page">
-    <h1>Profil Saya</h1>
-    <p>Nama: Habib</p>
-    <p>Pekerjaan: Web Developer</p>
-    <p>Deskripsi: Saya membuat website modern menggunakan HTML, CSS, dan JavaScript.</p>
-  </section>
+<!-- Halaman Home -->
+<section id="home" class="max-w-4xl mx-auto mt-6 p-6 bg-white rounded-lg shadow">
+  <h1 class="text-2xl font-bold mb-4">Selamat Datang di Website Saya</h1>
+  <img src="https://via.placeholder.com/800x300?text=Gambar+Home" alt="Gambar Home" class="w-full rounded-lg mb-4">
+  <p class="text-gray-700">Ini adalah halaman Home. Kamu bisa menambahkan informasi umum atau sambutan di sini.</p>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Website Sederhana</p>
-  </footer>
-</body>
-</html>
+<!-- Halaman Profile -->
+<section id="profile" class="max-w-4xl mx-auto mt-6 p-6 bg-white rounded-lg shadow hidden">
+  <h1 class="text-2xl font-bold mb-4">Profil Saya</h1>
+  <img src="https://via.placeholder.com/300x300?text=Foto+Profil" alt="Foto Profil" class="rounded-full mx-auto mb-4">
+  <p class="text-gray-700"><strong>Nama:</strong> Habib</p>
+  <p class="text-gray-700"><strong>Pekerjaan:</strong> Web Developer</p>
+  <p class="text-gray-700 mt-2">Saya membuat website modern menggunakan HTML, CSS, Tailwind, dan JavaScript.</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center p-4 mt-8">
+  <p>© 2025 Website Sederhana</p>
+</footer>
+
+<!-- Script untuk ganti halaman -->
+<script>
+function showPage(pageId) {
+  document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+  document.getElementById(pageId).classList.remove('hidden');
+}
+</script>
